@@ -14,7 +14,7 @@ class MainUI(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
         global names
-        with open("C:/Users/priva/Desktop/FaceRecognition-GUI-APP/FaceRecognition-GUI-APP-master/nameslist.txt", "r") as f:
+        with open("C:/Users/priva/Desktop/FaceRecognition-GUI-APP/nameslist.txt", "r") as f:
             x = f.read()
             z = x.rstrip().split(" ")
             for i in z:
@@ -58,7 +58,7 @@ class StartPage(tk.Frame):
             self.controller = controller
             #load = Image.open("homepagepic.png")
             #load = load.resize((250, 250), Image.ANTIALIAS)
-            render = PhotoImage(file='C:/Users/priva/Desktop/FaceRecognition-GUI-APP/FaceRecognition-GUI-APP-master/homepagepic.png')
+            render = PhotoImage(file='C:/Users/priva/Desktop/FaceRecognition-GUI-APP/homepagepic.png')
             img = tk.Label(self, image=render)
             img.image = render
             img.grid(row=0, column=1, rowspan=4, sticky="nsew")
@@ -196,6 +196,6 @@ class PageFour(tk.Frame):
 
 
 app = MainUI()
-app.iconphoto(False, tk.PhotoImage(file='C:/Users/priva/Desktop/FaceRecognition-GUI-APP/FaceRecognition-GUI-APP-master/icon.ico'))
+app.iconphoto(False, tk.PhotoImage(file='C:/Users/priva/Desktop/FaceRecognition-GUI-APP/icon.ico'))
 app.mainloop()
 
